@@ -1,6 +1,11 @@
 class Emprestimo {
     public DateTime dtEmprestimo;
     public DateTime dtDevolucao;
+
+    public Emprestimo(DateTime dtEmprestimo)
+    {
+        this.dtEmprestimo = dtEmprestimo;
+    }
 }
 
 class Exemplar {
@@ -15,12 +20,15 @@ class Exemplar {
 
     public bool emprestar()
     {
-        return false;
+        Emprestimo novoEmprestimo = new Emprestimo(DateTime.Now);
+        emprestimos.Add(novoEmprestimo);
+        return true;
     }
 
     public bool devolver()
     {
-        return false;
+        emprestimos.Last().dtDevolucao = DateTime.Now;
+        return true;
     }
 
     public bool disponivel()
@@ -75,22 +83,37 @@ class Livro {
 
     public int qtdExemplares()
     {
-        return 0;
+        return exemplares.Count();
     }
 
     public int qtdDisponiveis()
     {
-        return 0;
+        int disponivel = 0;
+
+        foreach(Exemplar exemplar in exemplares){
+            if(exemplar.emprestimos.Count == 0) disponivel++;
+            else{
+                if(exemplar.emprestimos.Last().dtDevolucao != null) disponivel++;
+            }
+        }
+
+        return disponivel;
     }
 
     public int qtdEmprestimos()
     {
-        return 0;
+        int emprestimos = 0;
+
+        foreach(Exemplar exemplar in exemplares){
+            emprestimos += exemplar.emprestimos.Count;
+        }
+        return emprestimos;
     }
 
     public double percDisponibilidade()
     {
-        return 0;
+        if(qtdDisponiveis() == 0) return 0;
+        return 100 * exemplares.Count / qtdDisponiveis();
     }
 }
 
