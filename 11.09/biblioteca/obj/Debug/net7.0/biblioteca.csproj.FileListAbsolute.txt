@@ -1,0 +1,15 @@
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\bin\Debug\net7.0\biblioteca.exe
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\bin\Debug\net7.0\biblioteca.deps.json
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\bin\Debug\net7.0\biblioteca.runtimeconfig.json
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\bin\Debug\net7.0\biblioteca.dll
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\bin\Debug\net7.0\biblioteca.pdb
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\biblioteca.csproj.AssemblyReference.cache
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\biblioteca.AssemblyInfoInputs.cache
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\biblioteca.AssemblyInfo.cs
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\biblioteca.dll
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\refint\biblioteca.dll
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\biblioteca.pdb
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\biblioteca.genruntimeconfig.cache
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\11.09\biblioteca\obj\Debug\net7.0\ref\biblioteca.dll
