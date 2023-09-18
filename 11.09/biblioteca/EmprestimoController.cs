@@ -22,12 +22,44 @@ class EmprestimoController {
         return biblioteca.acervo[index];
     }
 
-    public Livro pesquisarLivroSintetico() {
-        return new Livro();
+    public string pesquisarLivroSintetico(Livro livro) {
+        string pesqSintetica = "";
+        int index = biblioteca.acervo.FindIndex(e => e.isbn == livro.isbn);
+
+        if(index<0) return "Livro inexistente.";
+        else
+        {
+            pesqSintetica += "\nTotal de exemplares: " + livro.exemplares.Count +
+                             "\nExemplares disponíveis: " + livro.qtdDisponiveis() +
+                             "\nTotal de empréstimos: " + livro.qtdEmprestimos() +
+                             "\nDisponibilidade: " + livro.percDisponibilidade() +
+                             "%";
+        }
+        return pesqSintetica;
     }
 
-    public Livro pesquisarLivroAnalitico() {
-        return new Livro();
+    public string pesquisarLivroAnalitico(Livro livro) {
+        string pesquisa = pesquisarLivroSintetico(livro);
+
+        if(pesquisa == "Livro inexistente.") return pesquisa;
+
+        pesquisa += "\n";
+
+        foreach(Exemplar exemplar in livro.exemplares)
+        {
+            pesquisa += "\nTombo: " + exemplar.tombo;
+            
+            foreach(Emprestimo emprestimos in exemplar.emprestimos)
+            {
+                pesquisa += "\nData de empréstimo: " + emprestimos.dtEmprestimo;
+
+                if(emprestimos.dtDevolucao != null)
+                    pesquisa += "\nData de devolução: " + emprestimos.dtDevolucao;
+                pesquisa += "\n";
+            }
+        }
+
+        return pesquisa;
     }
 
     public bool addExemplar(Livro livro, Exemplar exemplar) {
@@ -37,18 +69,38 @@ class EmprestimoController {
         return true;
     }
 
-    public int verExemplares(Livro livro)
+    public bool verExemplar(Exemplar exemplar)
     {
-        return livro.exemplares.Count();
-    }
-
-    public bool emprestar(Livro livro) {
-        // pegar o item emprestimo dentro de exemplar
-        // resumindo, uma lista dentro de outra lista
+        if(exemplar.emprestimos.Count == 0) return true;
+        if(exemplar.emprestimos.Last().dtDevolucao != null) return true;
         return false;
     }
 
-    public bool devolver() {
+    public bool emprestar(Livro livro) {
+        if (livro.qtdDisponiveis()<1) return false;
+        
+        foreach(Exemplar exemplar in livro.exemplares)
+        {
+            if(verExemplar(exemplar))
+            {
+                return exemplar.emprestar();
+            }
+        }
+        return false;
+    }
+
+    public bool devolver(Livro livro, int tombo) {
+        int index;
+
+        foreach(Exemplar exemplar in livro.exemplares)
+        {
+            index = livro.exemplares.FindIndex(e => e.tombo == exemplar.tombo);
+            if(index < 0)
+            {
+                livro.exemplares[index].devolver();
+                return true;
+            }
+        }
         return false;
     }
 }
