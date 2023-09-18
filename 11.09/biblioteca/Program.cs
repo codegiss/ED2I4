@@ -1,4 +1,4 @@
-﻿int resp = 0;
+int resp = 0;
 int isbn, tombo;
 string titulo, autor, editora;
 EmprestimoController emprestimoController = new EmprestimoController();
@@ -49,8 +49,23 @@ do
             Console.WriteLine(emprestimoController.addLivro(novoLivro)? "Livro adicionado." : "Livro não adicionado. ISBN já existente.");
             break;
         case 2:
+            do
+            {
+                Console.Write("Digite o número do ISBN: ");
+                isbn = int.Parse(Console.ReadLine());
+            } while (isbn <= 0);
+
+            Console.WriteLine(emprestimoController.pesquisarLivroSintetico(new Livro(isbn)));
+
             break;
         case 3:
+            do
+            {
+                Console.Write("Digite o número do ISBN: ");
+                isbn = int.Parse(Console.ReadLine());
+            } while (isbn <= 0);
+
+            Console.WriteLine(emprestimoController.pesquisarLivroAnalitico(new Livro(isbn)));
             break;
         case 4:
             do{
@@ -70,7 +85,7 @@ do
 
                 Exemplar novo = new Exemplar(tombo);
 
-                Console.WriteLine(emprestimoController.addExemplar(novoExemplar, novo)? "adicionou" : "nao funfou");
+                Console.WriteLine(emprestimoController.addExemplar(novoExemplar, novo)? "Exemplar adicionado" : "Exemplar não adicionado");
             }
             else
             {
@@ -88,12 +103,11 @@ do
 
             if(emprestar.isbn != 0)
             {
-                int qtdExemplares = emprestimoController.verExemplares(emprestar);
-                Console.WriteLine(qtdExemplares);
+                int qtdExemplares = emprestar.qtdExemplares();
 
                 if(qtdExemplares > 0)
                 {
-                    emprestimoController.emprestar(emprestar);
+                    Console.WriteLine(emprestimoController.emprestar(emprestar)? "Livro emprestado com sucesso. " : "Livro não pode ser emprestado.");
                 }
             }
             else
@@ -102,6 +116,26 @@ do
             }
             break;
         case 6:
+            do
+            {
+                Console.Write("Digite o número do ISBN: ");
+                isbn = int.Parse(Console.ReadLine());
+            } while (isbn <= 0);
+
+            Livro devolver = emprestimoController.pesquisa(new Livro(isbn));
+
+            if(devolver.isbn != 0)
+            {
+                do
+                {
+                    Console.Write("Digite o número do tombo: ");
+                    tombo = int.Parse(Console.ReadLine());
+                } while (tombo <= 0);
+
+                Console.WriteLine(emprestimoController.devolver(devolver, tombo) ? "Livro devolvido com sucesso." : "Livro não pode ser devolvido. Verifique o tombo.");
+            }
+            else
+                Console.WriteLine("Livro não pode ser devolvido. Verifique o ISBN.");
             break;
         default:
             resp = -1;
