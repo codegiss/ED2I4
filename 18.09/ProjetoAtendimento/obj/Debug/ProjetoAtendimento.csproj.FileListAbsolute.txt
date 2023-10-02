@@ -1,0 +1,10 @@
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\bin\Debug\ProjetoAtendimento.exe.config
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\bin\Debug\ProjetoAtendimento.exe
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\bin\Debug\ProjetoAtendimento.pdb
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\obj\Debug\ProjetoAtendimento.csproj.AssemblyReference.cache
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\obj\Debug\ProjetoAtendimento.Form1.resources
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\obj\Debug\ProjetoAtendimento.Properties.Resources.resources
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\obj\Debug\ProjetoAtendimento.csproj.GenerateResource.cache
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\obj\Debug\ProjetoAtendimento.csproj.CoreCompileInputs.cache
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\obj\Debug\ProjetoAtendimento.exe
+C:\Users\gisel\Programming\ifsp\4o. semestre\ED1I4\18.09\ProjetoAtendimento\obj\Debug\ProjetoAtendimento.pdb
