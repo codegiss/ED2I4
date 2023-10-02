@@ -1,0 +1,15 @@
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\bin\Debug\net6.0\Projeto Medicamento.exe
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\bin\Debug\net6.0\Projeto Medicamento.deps.json
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\bin\Debug\net6.0\Projeto Medicamento.runtimeconfig.json
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\bin\Debug\net6.0\Projeto Medicamento.dll
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\bin\Debug\net6.0\Projeto Medicamento.pdb
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\Projeto Medicamento.csproj.AssemblyReference.cache
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\Projeto Medicamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\Projeto Medicamento.AssemblyInfoInputs.cache
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\Projeto Medicamento.AssemblyInfo.cs
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\Projeto Medicamento.csproj.CoreCompileInputs.cache
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\Projeto Medicamento.dll
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\refint\Projeto Medicamento.dll
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\Projeto Medicamento.pdb
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\Projeto Medicamento.genruntimeconfig.cache
+C:\Users\aluno\Downloads\02.10\Projeto Medicamento\obj\Debug\net6.0\ref\Projeto Medicamento.dll
