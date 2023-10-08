@@ -1,5 +1,3 @@
-using System.Data.Common;
-
 class Medicamento
 {
     private int id;
@@ -7,10 +5,10 @@ class Medicamento
     private string laboratorio;
     private Queue<Lote> lotes;
 
-    public int Id { get => id; set{ id = value;}}
-    public string Nome { get => nome; set { nome = value; }}
-    public string Laboratorio { get => laboratorio; set { laboratorio = value; }}
-    public Queue<Lote> Lotes { get => lotes; set { lotes = value; }}
+    public int Id { get => id; set { id = value; } }
+    public string Nome { get => nome; set { nome = value; } }
+    public string Laboratorio { get => laboratorio; set { laboratorio = value; } }
+    public Queue<Lote> Lotes { get => lotes; set { lotes = value; } }
 
     public Medicamento()
     {
@@ -30,26 +28,79 @@ class Medicamento
     {
         int qtd = 0;
 
-        foreach(Lote l in lotes)
+        try
         {
-            qtd += l.Qtde;
-        }
+            if (lotes.Count > 0)
+            {
+                foreach (Lote l in lotes)
+                {
+                    qtd += l.Qtde;
+                }
+            }
+        } catch (Exception e) {}
+
         return qtd;
     }
 
     public void comprar(Lote lote)
     {
-        
+        lotes.Append(lote);
     }
 
     public bool vender(int qtde)
     {
-        return false;
+        if (qtdeDisponivel() < qtde) return false;
+
+        while (qtde > 0)
+        {
+            if (lotes.First().Qtde < qtde)
+            {
+                qtde -= lotes.First().Qtde;
+                lotes.Dequeue();
+            }
+            else
+            {
+                lotes.First().Qtde -= qtde;
+                qtde = 0;
+
+                if (lotes.First().Qtde == 0)
+                {
+                    lotes.Dequeue();
+                }
+            }
+        }
+
+        return true;
     }
 
     public string toString()
     {
-        return "";
+        return Id + " - " + Nome + " - " + Laboratorio + " - " + qtdeDisponivel();
+    }
+
+    public string mostrarLotes()
+    {
+        string lote = "\n";
+
+        try
+        {
+            if(lotes.Count == 0)
+            {
+                lote = "Não há lotes comprados para este remédio.";
+            }
+            else
+            {
+                foreach (Lote l in lotes)
+                {
+                    lote += l.Id + " - ";
+                    lote += l.Qtde + " - ";
+                    lote += l.Venc.Day + "/" +
+                            l.Venc.Month + "/" +
+                            l.Venc.Year + "\n";
+                }
+            }
+        } catch (Exception e) {}
+        return lote;
     }
 
     public override bool Equals(object obj)
