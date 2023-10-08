@@ -24,6 +24,6 @@ class Lote
 
     public string toString()
     {
-        return "";
+        return id +" - " + qtde + " - " + venc;
     }
 }
